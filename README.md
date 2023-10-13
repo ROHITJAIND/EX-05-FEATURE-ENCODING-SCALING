@@ -14,7 +14,7 @@ Developed By: ROHIT JAIN D
 Register No: 212222230120
 ```
 - Encoding.csv:
-  ```
+  ```Python
   import pandas as pd
   df=pd.read_csv('Encoding Data.csv')
   df.head()
@@ -51,7 +51,7 @@ Register No: 212222230120
 
 
 - Data.csv:
-  ```
+  ```Python
   import pandas as pd
   df1 = pd.read_csv("data.csv")
   df.head()
@@ -94,7 +94,7 @@ Register No: 212222230120
       <img height=20% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/9211db6c-364d-4310-8c47-38a151d95d7f">
 
 - BMI.csv:
-  ```
+  ```Python
   import pandas as pd
   df2 = pd.read_csv("/content/bmi.csv")
   df2.head()
