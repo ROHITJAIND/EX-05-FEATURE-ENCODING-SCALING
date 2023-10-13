@@ -30,11 +30,11 @@ Register No: 212222230120
   from category_encoders import BinaryEncoder
   be = BinaryEncoder()
   data = be.fit_transform(df['bin_1'])
-  df  = pd.concat([df,data],axis=1)
+  df = pd.concat([df,data],axis=1)
   df
   be = BinaryEncoder()
   data = be.fit_transform(df['bin_2'])
-  df  = pd.concat([df,data],axis=1)
+  df = pd.concat([df,data],axis=1)
   df
   ```
   - Output:
@@ -47,38 +47,38 @@ Register No: 212222230120
     - Label Encoder:<br>
       <img height=15% width=60% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/e9fd27ca-93ba-47a7-9b69-8ac0c1bc06fe">
     - Binary Encoder:<br>
-      <img height=15% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/adffa9d7-4a6a-4de2-827e-2f41bd7560ee"><img height=15% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/3a6f8f34-7028-4d2f-9d84-cce7b2853d2a">
+      <img height=20% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/adffa9d7-4a6a-4de2-827e-2f41bd7560ee"><img height=20% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/3a6f8f34-7028-4d2f-9d84-cce7b2853d2a">
 
 
 - Data.csv:
   ```
   import pandas as pd
   df1 = pd.read_csv("data.csv")
-  df1.head()
-  df1['Ord_1'].unique()
+  df.head()
+  df['Ord_1'].unique()
   from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
   climate = ['Cold','Warm','Hot','Very Hot']
   en= OrdinalEncoder(categories = [climate])
-  df1['Ord_1']=en.fit_transform(df1[["Ord_1"]])
-  df1
-  df1['Ord_2'].unique()
+  df['Ord_1']=en.fit_transform(df[["Ord_1"]])
+  df.head()
+  df['Ord_2'].unique()
   cl = ['High School','Diploma','Bachelors','Masters','PhD']
   en= OrdinalEncoder(categories = [cl])
-  df1['Ord_2']=en.fit_transform(df1[["Ord_2"]])
-  df1
+  df['Ord_2']=en.fit_transform(df[["Ord_2"]])
+  df.head()
   le = LabelEncoder()
-  df1['City'] = le.fit_transform(df1[["City"]])
-  df1
+  df['City'] = le.fit_transform(df[["City"]])
+  df.head()
+  from category_encoders import BinaryEncoder
+  be= BinaryEncoder()
+  data= be.fit_transform(df['bin_1'])
+  df= pd.concat([df,data],axis=1)
+  df.head()
   from category_encoders import BinaryEncoder
   be = BinaryEncoder()
-  dat = be.fit_transform(df1['bin_1'])
-  df1  = pd.concat([df1,dat],axis=1)
-  df1
-  from category_encoders import BinaryEncoder
-  be = BinaryEncoder()
-  data1 = be.fit_transform(df1['bin_2'])
-  df1  = pd.concat([df1,data1],axis=1)
-  df1  
+  data1 = be.fit_transform(df['bin_2'])
+  df= pd.concat([df1,data1],axis=1)
+  df  
   ```
   - Output:
     - Initial data:<br>
@@ -106,12 +106,15 @@ Register No: 212222230120
   df2
   ```
   - Output:
-    - Initial data:
-      -
-    - Binary Encoder:
-      -
-    - Dummies:
-      -
+    - Initial data:<br>
+      <img height=20% width=45% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/532fcf97-f3bc-424e-9bac-e7157fc98ba8">
+
+    - Binary Encoder:<br>
+      <img heeight=20% width=70% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/d09bc5ef-7b73-4ed9-b21a-57535b9ceaf2">
+
+    - Dummies:<br>
+      <img heeight=20% width=100% src="https://github.com/ROHITJAIND/EX-05-FEATURE-ENCODING-SCALING/assets/118707073/071fdcea-6db7-48d7-bf64-3dcca16864f5">
+
 ### Result:
 The Feature Generation process was performed and saved the data to a file.
 
